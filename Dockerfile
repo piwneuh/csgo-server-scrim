@@ -3,7 +3,7 @@
 #####################################################################
 FROM cm2network/steamcmd:root
 
-ENV HOMEDIR /home/steam
+ENV HOMEDIR /home
 ENV STEAMAPPID 740
 ENV STEAMAPP csgo
 ENV STEAMAPPDIR "${HOMEDIR}/${STEAMAPP}-dedicated"
@@ -29,8 +29,8 @@ RUN set -x \
 	&& { \
 		echo '@ShutdownOnFailedCommand 1'; \
 		echo '@NoPromptForPassword 1'; \
-		echo 'login anonymous'; \
 		echo 'force_install_dir '"${STEAMAPPDIR}"''; \
+		echo 'login anonymous'; \
 		echo 'app_update '"${STEAMAPPID}"''; \
 		echo 'quit'; \
 	   } > "${HOMEDIR}/${STEAMAPP}_update.txt" \
