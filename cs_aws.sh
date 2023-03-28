@@ -14,37 +14,22 @@ docker-compose --version
 
 # Clone repo locally
 mkdir ~/cs_server_1/
-git clone https://github.com/FragSoc/csgo-server-scrim.git ~/cs_server_1/.
-# mkdir ~/cs_server_2/
-# git clone https://github.com/FragSoc/csgo-server-scrim.git ~/cs_server_2/.
+git clone https://github.com/piwneuh/csgo-server-scrim.git ~/cs_server_1/.
 
 # Configure ports and source tokens
 sed -i 's/SRCDS_TOKEN=309E76122D3C7522154AC7513C51984E/SRCDS_TOKEN=CEEDB8BE64A0E50CDF313C67A7E0C55F/g' ~/cs_server_1/docker-compose.yml
-
-# sed -i 's/SRCDS_TOKEN=309E76122D3C7522154AC7513C51984E/SRCDS_TOKEN=5BA590C6B96839FC248667027F2E8D79/g' ~/cs_server_2/docker-compose.yml
-# sed -i 's/SRCDS_PORT=27015/SRCDS_PORT=27016/g' ~/cs_server_2/docker-compose.yml
-# sed -i 's/SRCDS_TV_PORT=27020/SRCDS_TV_PORT=27021/g' ~/cs_server_2/docker-compose.yml
 
 # Configure passwords
 sed -i 's/hostname "UoY Esports"/hostname "EarnGames"/g' ~/cs_server_1/custom_server_template.cfg
 sed -i 's/sv_password "default"/sv_password "gaming_village"/g' ~/cs_server_1/custom_server_template.cfg
 sed -i 's/rcon_password "default"/rcon_password "gaming_village"/g' ~/cs_server_1/custom_server_template.cfg
 
-# sed -i 's/hostname "UoY Esports"/hostname "UoY Esports #2"/g' ~/cs_server_2/custom_server_template.cfg
-# sed -i 's/sv_password "default"/sv_password "mLMQ7LgM"/g' ~/cs_server_2/custom_server_template.cfg
-# sed -i 's/rcon_password "default"/rcon_password "zuKUW8wR"/g' ~/cs_server_2/custom_server_template.cfg
-
 # Make install directory
 mkdir ~/cs_server_1/csgo-data
 chmod 777 ~/cs_server_1/csgo-data
-# mkdir ~/cs_server_2/csgo-data
-# chmod 777 ~/cs_server_2/csgo-data
 
 # Run container composes
 sudo docker-compose -f ~/cs_server_1/docker-compose.yml up -d
-#sudo docker-compose -f ~/cs_server_2/docker-compose.yml up -d
 
-
-# rsync -av csgo-server-scrim/ csgo-server-scrim_2/
 
 

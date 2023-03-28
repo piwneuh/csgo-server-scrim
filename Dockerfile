@@ -3,6 +3,7 @@
 #####################################################################
 FROM cm2network/steamcmd:root
 
+ENV HOMEDIR /home/steam
 ENV STEAMAPPID 740
 ENV STEAMAPP csgo
 ENV STEAMAPPDIR "${HOMEDIR}/${STEAMAPP}-dedicated"
