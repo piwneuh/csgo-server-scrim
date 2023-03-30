@@ -3,7 +3,6 @@
 #####################################################################
 FROM cm2network/steamcmd:root
 
-ENV HOMEDIR /home
 ENV STEAMAPPID 740
 ENV STEAMAPP csgo
 ENV STEAMAPPDIR "${HOMEDIR}/${STEAMAPP}-dedicated"
@@ -42,8 +41,8 @@ ENV SRCDS_PORT=27015 \
 	SRCDS_TV_PORT=27020 \
 	SRCDS_CLIENT_PORT=27005 \
 	SRCDS_TOKEN=0 \
-	METAMOD_VERSION=1.10 \
-	SOURCEMOD_VERSION=1.10
+	METAMOD_VERSION=1.12 \
+	SOURCEMOD_VERSION=1.12
 
 # Expose ports
 EXPOSE 27015/tcp \

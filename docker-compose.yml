@@ -6,7 +6,7 @@ services:
       - ./csgo-data:/home/steam/csgo-dedicated/
     network_mode: "host"
     environment: 
-      - SRCDS_TOKEN=309E76122D3C7522154AC7513C51984E # Do not replace with your own SRCDS token, cs_aws.sh is configured to change this parameter
+      - SRCDS_TOKEN=CEEDB8BE64A0E50CDF313C67A7E0C55F # Do not replace with your own SRCDS token, cs_aws.sh is configured to change this parameter
       - SRCDS_PORT=27015
       - SRCDS_TV_PORT=27020
       - SCRIM=true # Set false for a team structured config

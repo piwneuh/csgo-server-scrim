@@ -17,7 +17,7 @@ mkdir ~/cs_server_1/
 git clone https://github.com/piwneuh/csgo-server-scrim.git ~/cs_server_1/.
 
 # Configure ports and source tokens
-sed -i 's/SRCDS_TOKEN=309E76122D3C7522154AC7513C51984E/SRCDS_TOKEN=CEEDB8BE64A0E50CDF313C67A7E0C55F/g' ~/cs_server_1/docker-compose.yml
+sed -i 's/SRCDS_TOKEN=CEEDB8BE64A0E50CDF313C67A7E0C55F/SRCDS_TOKEN=CEEDB8BE64A0E50CDF313C67A7E0C55F/g' ~/cs_server_1/docker-compose.yml
 
 # Configure passwords
 sed -i 's/hostname "UoY Esports"/hostname "EarnGames"/g' ~/cs_server_1/custom_server_template.cfg
