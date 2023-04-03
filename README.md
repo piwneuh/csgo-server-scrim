@@ -1,6 +1,14 @@
 A docker image for running a dedicated server for the game [CS:GO](https://blog.counter-strike.net/). Configured to use the [Get5](https://github.com/splewis/get5/) plugin alongside [Metamod:Source](https://www.sourcemm.net/) and [Sourcemod](https://www.sourcemod.net/) to host a quick setup scrim server. This is a modified version of [CM2Walki's](https://github.com/CM2Walki/CSGO) Dockerfile.
 
 # How to use this image
+
+## Deploying on clean AWS instance
+
+Copy <b>cs_aws.sh</b> to your instance and run it:
+
+```
+chmod +x cs_aws.sh && ./cs_aws.sh
+```
 ## Simple usage (recommended)
 
 Clone this repository locally:<br/>
@@ -48,7 +56,10 @@ METAMOD_VERSION=1.10
 SOURCEMOD_VERSION=1.10
 ```
 **If you edit the ports you will need to adjust these within the docker-compose file also.**
-## Additional config (to-do)
-The image also contains a copy of the official ESL config files from [here](https://play.eslgaming.com/download/26251762/). You will need to disable the Get5 plugin however (to-do)
 
-If you want to learn more about configuring a CS:GO server check this [documentation](https://developer.valvesoftware.com/wiki/Counter-Strike:_Global_Offensive_Dedicated_Servers#Advanced_Configuration).
+---
+### TODO: 
+
+1. Create a way to generate SRCDS tokens for each server.
+2. Find a way to deploy on demand.
+3. Restructure <b>cs_aws.sh</b> to allow for multiple CSGO server instances to be deployed at once.
