@@ -10,3 +10,4 @@ services:
       - SRCDS_PORT=27015
       - SRCDS_TV_PORT=27020
       - SCRIM=true # Set false for a team structured config
+    command: tail -F anything

@@ -69,5 +69,5 @@ bash "${STEAMAPPDIR}/srcds_run" -game "${STEAMAPP}" -console -autoupdate \
 			-ip "0" \
 			+host_workshop_collection "0" \
 			+workshop_start_map "0" \
-			-authkey "" \
+			-authkey "pass" \
 			+sv_setsteamaccount "${SRCDS_TOKEN}"
