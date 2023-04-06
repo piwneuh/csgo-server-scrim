@@ -21,8 +21,8 @@ sed -i 's/SRCDS_TOKEN=CEEDB8BE64A0E50CDF313C67A7E0C55F/SRCDS_TOKEN=CEEDB8BE64A0E
 
 # Configure passwords
 sed -i 's/hostname "UoY Esports"/hostname "EarnGames"/g' ~/cs_server_1/custom_server_template.cfg
-sed -i 's/sv_password "default"/sv_password "gaming_village"/g' ~/cs_server_1/custom_server_template.cfg
-sed -i 's/rcon_password "default"/rcon_password "gaming_village"/g' ~/cs_server_1/custom_server_template.cfg
+sed -i 's/sv_password ""/sv_password ""/g' ~/cs_server_1/custom_server_template.cfg
+sed -i 's/rcon_password ""/rcon_password ""/g' ~/cs_server_1/custom_server_template.cfg
 
 # Make install directory
 mkdir ~/cs_server_1/csgo-data
