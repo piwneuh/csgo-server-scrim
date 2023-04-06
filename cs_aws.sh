@@ -20,7 +20,7 @@ git clone https://github.com/piwneuh/csgo-server-scrim.git ~/cs_server_1/.
 sed -i 's/SRCDS_TOKEN=CEEDB8BE64A0E50CDF313C67A7E0C55F/SRCDS_TOKEN=CEEDB8BE64A0E50CDF313C67A7E0C55F/g' ~/cs_server_1/docker-compose.yml
 
 # Configure passwords
-sed -i 's/hostname "UoY Esports"/hostname "EarnGames"/g' ~/cs_server_1/custom_server_template.cfg
+sed -i 's/hostname "UoY Esports"/hostname "defind"/g' ~/cs_server_1/custom_server_template.cfg
 sed -i 's/sv_password ""/sv_password ""/g' ~/cs_server_1/custom_server_template.cfg
 sed -i 's/rcon_password ""/rcon_password ""/g' ~/cs_server_1/custom_server_template.cfg
 
