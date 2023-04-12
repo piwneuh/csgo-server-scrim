@@ -27,6 +27,14 @@ if [ ! -f "${STEAMAPPDIR}/${STEAMAPP}/cfg/sourcemod/get5.cfg" ];
 		chmod -R 777 "${STEAMAPPDIR}/${STEAMAPP}/"
 		rm -rf latest-get5.zip "${STEAMAPPDIR}/${STEAMAPP}/get5/"
 
+		# Download SteamWorks
+		wget https://github.com/KyleSanderson/SteamWorks/releases/download/1.2.3c/package-lin.tgz
+		tar -xvzf package-lin.tgz
+		cp -r package/addons/sourcemod/extensions/* "${STEAMAPPDIR}/${STEAMAPP}/addons/sourcemod/extensions/"
+		cp -r package/addons/sourcemod/scripting/swag.sp "${STEAMAPPDIR}/${STEAMAPP}/addons/sourcemod/scripting/"
+		cp -r package/addons/sourcemod/scripting/include/* "${STEAMAPPDIR}/${STEAMAPP}/addons/sourcemod/scripting/include/"
+		rm -rf package-lin.tgz package-lin
+
 		# Replace current server.cfg with template file
 		cp -r custom_server_template.cfg "${STEAMAPPDIR}/${STEAMAPP}/cfg/server.cfg"
 		cp -r structured_match_config.cfg "${STEAMAPPDIR}/${STEAMAPP}/cfg/match.cfg"
