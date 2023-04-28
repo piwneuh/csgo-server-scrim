@@ -29,6 +29,7 @@ mkdir ~/cs_server_1/csgo-data
 chmod 777 ~/cs_server_1/csgo-data
 
 # Run container composes
+# TODO: add --env-file 
 sudo docker-compose -f ~/cs_server_1/docker-compose.yml up -d
 
 
