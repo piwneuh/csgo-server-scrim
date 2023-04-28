@@ -1,0 +1,2 @@
+# Create docker.env (srcds = xxxxx)
+sudo docker compose -f ~/cs_server_1/docker-compose.yml --env-file docker.env up -d
